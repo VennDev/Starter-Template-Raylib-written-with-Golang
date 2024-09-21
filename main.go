@@ -15,15 +15,15 @@ func main() {
 	rl.InitWindow(ScreenWidth, ScreenHeight, TitleGame)
 	rl.SetTargetFPS(60)
 
-	ball := ball.NewBall()
-	ball.Init() // This is initialization of ball
+	b := ball.NewBall()
+	b.Init() // This is initialization of ball
 
 	for !rl.WindowShouldClose() {
 		rl.BeginDrawing()
 		rl.ClearBackground(rl.RayWhite)
 
-		ball.Update()
-		ball.Draw()
+		b.Update()
+		b.Draw()
 
 		rl.EndDrawing()
 	}
